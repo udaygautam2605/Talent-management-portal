@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scripting Documentation</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #4CAF50, #2196F3);
+            color: #fff;
+            display: flex;
+        }
+
+        .menu {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .documentation {
+            flex: 2;
+            padding: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #fff;
+            display: block;
+            padding: 10px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        .selected {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        p {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="menu">
+        <h2>Menu</h2>
+        <ul>
+            <li><a href="#bash">Bash Script</a></li>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#css">CSS</a></li>
+            <li><a href="#javascript">JavaScript</a></li>
+            <li><a href="#php">PHP</a></li>
+        </ul>
+    </div>
+    <div class="documentation">
+        <h2>Documentation</h2>
+        <div id="bash" style="display:none;">
+            <h3>Bash Script</h3>
+            <p>Bash is a Unix shell and command language.</p>
+        </div>
+        <div id="html" style="display:none;">
+            <h3>HTML</h3>
+            <p>HTML is the standard markup language for creating web pages.</p>
+        </div>
+        <div id="css" style="display:none;">
+            <h3>CSS</h3>
+            <p>CSS is used for styling web pages.</p>
+        </div>
+        <div id="javascript" style="display:none;">
+            <h3>JavaScript</h3>
+            <p>JavaScript is a programming language that enables interactive web pages.</p>
+        </div>
+        <div id="php" style="display:none;">
+            <h3>PHP</h3>
+            <p>PHP is a server-side scripting language.</p>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            var links = document.querySelectorAll('.menu a');
+
+            links.forEach(function(link) {
+                link.addEventListener('click', function() {
+                    var selectedLink = document.querySelector('.menu a.selected');
+                    if (selectedLink) {
+                        selectedLink.classList.remove('selected');
+                    }
+                    this.classList.add('selected');
+
+                    var id = this.getAttribute('href').substring(1);
+                    var documentationSections = document.querySelectorAll('.documentation div');
+                    documentationSections.forEach(function(section) {
+                        section.style.display = 'none';
+                    });
+                    var selectedSection = document.getElementById(id);
+                    selectedSection.style.display = 'block';
+                });
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>NIT Kurukshetra Event</title>
+   <style>
+       body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+           background-color: #f9f9f9;
+       }
+       header {
+           background-color: #333;
+           color: #fff;
+           padding: 20px 0;
+           text-align: center;
+           border-bottom: 4px solid #9c4949;
+       }
+       .container {
+           max-width: 800px;
+           margin: 20px auto;
+           padding: 20px;
+           background-color: #fff;
+           border-radius: 8px;
+           box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+       }
+       .event-details {
+           margin-bottom: 20px;
+       }
+       .map-container {
+           position: relative;
+           width: 100%;
+           height: 300px;
+           margin-top: 20px;
+           border-radius: 8px;
+           overflow: hidden;
+       }
+       #map {
+           width: 100%;
+           height: 100%;
+           border: none;
+       }
+       form {
+           background-color: #f5f5f5;
+           padding: 20px;
+           border-radius: 8px;
+           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+       }
+       label {
+           display: block;
+           margin-bottom: 10px;
+           color: #333;
+           font-weight: bold;
+       }
+       input[type="text"],
+       input[type="email"],
+       input[type="file"],
+       input[type="submit"] {
+           width: 100%;
+           padding: 10px;
+           margin-bottom: 15px;
+           border: 1px solid #ccc;
+           border-radius: 4px;
+           box-sizing: border-box;
+       }
+       input[type="file"] {
+           padding: 8px;
+       }
+       input[type="submit"] {
+           background-color: #9c4949;
+           color: #fff;
+           cursor: pointer;
+           transition: background-color 0.3s ease;
+       }
+       input[type="submit"]:hover {
+           background-color: #733939;
+       }
+       h2 {
+           color: #9c4949;
+           margin-bottom: 20px;
+       }
+   </style>
+</head>
+<body>
+   <header>
+       <h1>TECHSPARDHA</h1>
+       <h4>NIT Kurukshetra</h4>
+   </header>
+   <div class="container">
+       <div class="event-details">
+           <p>"Embrace innovation and ignite your passion at NIT Kurukshetra's electrifying Tech Fest, featuring cutting-edge competitions, inspiring workshops, and endless opportunities to shape the future!"</p>
+           <p>Event Date: <input type="date" id="event-date" min="2024-04-01" max="2024-04-30"></p>
+           <p>Register now to secure your spot!</p>
+           <img src="https://imgs.search.brave.com/h7UuCiF0LQABgLCWmC5R-h4Lmas6OjHbjOCcXn30_Iw/rs:fit:860:0:0/g:ce/aHR0cHM6Ly91cGxv/YWQud2lraW1lZGlh/Lm9yZy93aWtpcGVk/aWEvY29tbW9ucy90/aHVtYi9lL2U2L1Rl/Y2hzcGFyZGhhX0lj/b24uanBnLzIyMHB4/LVRlY2hzcGFyZGhh/X0ljb24uanBn" alt="Event Image" style="max-width: 100%; height: auto;">
+           <iframe width="100%" height="315" src="https://youtu.be/NyHq7Pp1PuY?t=85" frameborder="0" allowfullscreen></iframe>
+       </div>
+      
+       <form action="#" method="post" enctype="multipart/form-data">
+           <h2>Registration</h2>
+           <label for="full-name">Full Name:</label>
+           <input type="text" id="full-name" name="full-name" placeholder="Enter your full name">
+           <label for="email">Email:</label>
+           <input type="email" id="email" name="email" placeholder="Enter your email">
+           <label for="id-card">Upload ID Card (.jpg/.jpeg/.png only):</label>
+           <input type="file" id="id-card" name="id-card" accept=".jpg, .jpeg, .png">
+           <input type="submit" value="Register">
+       </form>
+      
+       <div class="map-container">
+           <h2>Location</h2>
+           <iframe id="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3457.6240419963014!2d76.8778421151373!3d29.966356181901393!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3911a6bdf4cb5cf3%3A0xd059208e3dd28bf7!2sNational%20Institute%20of%20Technology%20Kurukshetra!5e0!3m2!1sen!2sin!4v1646989362292!5m2!1sen!2sin" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+       </div>
+   </div>
+</body>
+</html>
+
+
+
+
